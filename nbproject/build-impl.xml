@@ -19,7 +19,11 @@ is divided into following sections:
   - cleanup
 
         -->
+<<<<<<< HEAD
 <project xmlns:if="ant:if" xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxrpc="http://www.netbeans.org/ns/j2se-project/jax-rpc" xmlns:unless="ant:unless" basedir=".." default="default" name="GerenciamentoImpressao3D_copia-impl">
+=======
+<project xmlns:if="ant:if" xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxrpc="http://www.netbeans.org/ns/j2se-project/jax-rpc" xmlns:unless="ant:unless" basedir=".." default="default" name="GerenciamentoImpressao3D-impl">
+>>>>>>> ae9bad8e16badffc10c5c44ebc2df36589fa4f9a
     <fail message="Please build using Ant 1.8.0 or higher.">
         <condition>
             <not>
@@ -619,7 +623,11 @@ is divided into following sections:
                     </fileset>
                 </union>
                 <taskdef classname="org.testng.TestNGAntTask" classpath="${run.test.classpath}" name="testng"/>
+<<<<<<< HEAD
                 <testng classfilesetref="test.set" failureProperty="tests.failed" listeners="org.testng.reporters.VerboseReporter" methods="${testng.methods.arg}" mode="${testng.mode}" outputdir="${build.test.results.dir}" suitename="GerenciamentoImpressao3D_copia" testname="TestNG tests" workingDir="${work.dir}">
+=======
+                <testng classfilesetref="test.set" failureProperty="tests.failed" listeners="org.testng.reporters.VerboseReporter" methods="${testng.methods.arg}" mode="${testng.mode}" outputdir="${build.test.results.dir}" suitename="GerenciamentoImpressao3D" testname="TestNG tests" workingDir="${work.dir}">
+>>>>>>> ae9bad8e16badffc10c5c44ebc2df36589fa4f9a
                     <xmlfileset dir="${build.test.classes.dir}" includes="@{testincludes}"/>
                     <propertyset>
                         <propertyref prefix="test-sys-prop."/>
@@ -716,7 +724,11 @@ is divided into following sections:
                 <condition else="-testclass @{testClass}" property="test.class.or.method" value="-methods @{testClass}.@{testMethod}">
                     <isset property="test.method"/>
                 </condition>
+<<<<<<< HEAD
                 <condition else="-suitename GerenciamentoImpressao3D_copia -testname @{testClass} ${test.class.or.method}" property="testng.cmd.args" value="@{testClass}">
+=======
+                <condition else="-suitename GerenciamentoImpressao3D -testname @{testClass} ${test.class.or.method}" property="testng.cmd.args" value="@{testClass}">
+>>>>>>> ae9bad8e16badffc10c5c44ebc2df36589fa4f9a
                     <matches pattern=".*\.xml" string="@{testClass}"/>
                 </condition>
                 <delete dir="${build.test.results.dir}" quiet="true"/>
@@ -1057,7 +1069,11 @@ is divided into following sections:
         <delete file="${built-jar.properties}" quiet="true"/>
     </target>
     <target if="already.built.jar.${basedir}" name="-warn-already-built-jar">
+<<<<<<< HEAD
         <echo level="warn" message="Cycle detected: GerenciamentoImpressao3D_copia was already built"/>
+=======
+        <echo level="warn" message="Cycle detected: GerenciamentoImpressao3D was already built"/>
+>>>>>>> ae9bad8e16badffc10c5c44ebc2df36589fa4f9a
     </target>
     <target depends="init,-deps-jar-init" name="deps-jar" unless="no.deps">
         <mkdir dir="${build.dir}"/>
@@ -1728,7 +1744,11 @@ is divided into following sections:
         <delete file="${built-clean.properties}" quiet="true"/>
     </target>
     <target if="already.built.clean.${basedir}" name="-warn-already-built-clean">
+<<<<<<< HEAD
         <echo level="warn" message="Cycle detected: GerenciamentoImpressao3D_copia was already built"/>
+=======
+        <echo level="warn" message="Cycle detected: GerenciamentoImpressao3D was already built"/>
+>>>>>>> ae9bad8e16badffc10c5c44ebc2df36589fa4f9a
     </target>
     <target depends="init,-deps-clean-init" name="deps-clean" unless="no.deps">
         <mkdir dir="${build.dir}"/>
